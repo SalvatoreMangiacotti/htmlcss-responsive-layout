@@ -9,16 +9,23 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f6f5f3;
+    line-height: 1.5;
 }
 
 ul li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-family: "Nerko One", cursive;
-    color: orange;
+    color: #ff9614;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.767);
 }
+
 
 /* General classes */
 
@@ -26,6 +33,14 @@ h1 {
     display: table;
     content: "";
     clear: both;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 999px;
 }
 
 /* Header - Mobile */
@@ -36,9 +51,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-
-    /*Debug*/
-    background-color: lightblue;
+    background-color: white;
 }
 
 header h1 {
@@ -52,28 +65,59 @@ header h1 {
     padding: 2rem;
 }
 
+/* Main Section - Titles */
+
+#title-category {
+    color: gray;
+    margin-bottom: 0.5rem;
+}
+
+#main-title {
+    font-size: 2rem;
+    color: #4e3969;
+    margin-bottom: 1rem;
+}
+
+#main-title span {
+    display: none;
+}
+
+/* Main Section - Recipe */
+
+#recipe-section {
+    background-color: white;
+    margin-bottom: 2rem;
+}
+
 #recipe-video {
-    /*Debug*/
-    height: 400px;
     width: 100%;
-    background-color: lavender;
+}
+
+#recipe-video img {
+    width: 100%;
 }
 
 #recipe-overview {
-    padding: 1rem;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+#recipe-overview h3,
+#recipe-overview li {
+    margin-bottom: 1rem;
 }
 
 /* Socials Section - Mobile*/
 
 #social-section {
-    /*Debug*/
-    background-color: lightblue;
+    margin-bottom: 2rem;
 }
 
 #social-section ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 #social-section i {
@@ -88,20 +132,36 @@ header h1 {
 
 #subscribe-section {
     display: none;
+    margin-bottom: 2rem;
+}
 
-    /*Debug*/
-    height: 100px;
-    background-color: lavender;
+#subscribe-section img {
+    width: 100%;
 }
 
 /* Presentation Section - Mobile */
 
-#presentation-img {
+#presentation-section {
+    margin-bottom: 5rem;
+}
 
-    /*Debug*/
-    height: 300px;
-    width: 400px;
-    background-color: lightcyan;
+#presentation-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+#presentation-img {
+    margin: 1rem auto;
+    width: 70%;
+}
+
+#presentation-img img {
+    width: 100%;
+}
+
+#presentation-section article {
+    font-size: 1.3rem;
 }
 
 /* Footer - Mobile */
@@ -110,7 +170,8 @@ footer {
     background-color: mediumpurple;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+    font-size: 1.2rem;
 }
 
 footer ul {
@@ -121,8 +182,16 @@ footer ul {
     gap: 1rem;
 }
 
+#footer-left {
+    margin-bottom: 1rem;
+}
+
 footer a {
     color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Tablet Layout */
@@ -136,22 +205,37 @@ footer a {
         width: 90%;
     }
 
+    #main-title {
+        font-size: 2.5rem;
+    }
+
+    #main-title span {
+        display: inline;
+    }
+
     #recipe-overview ul {
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 0 2rem;
+        text-wrap: nowrap;
     }
 
-    #social-section span {
-        display: inline;
+    .button {
+        padding: 1rem 3rem;
     }
 
     #subscribe-section {
         display: block;
+    }
 
-        /*Debug*/
-        height: 100px;
-        background-color: lavender;
+    #presentation-img {
+        margin: 0;
+        width: 30%;
+    }
+
+    #presentation-img img {
+        float: left;
+        margin-right: 15px;
     }
 
 }
@@ -163,9 +247,41 @@ footer a {
         width: 70%;
     }
 
+    #main-title {
+        font-size: 3rem;
+        text-wrap: nowrap;
+    }
+
+    #recipe-section {
+        display: flex;
+        align-items: stretch;
+        justify-content: baseline;
+    }
+
+    #recipe-video {
+        width: 70%;
+    }
+
+    #recipe-video img {
+        height: 100%;
+    }
+
+    #recipe-overview ul {
+        display: block;
+    }
+
+    #social-section span {
+        display: inline;
+    }
+
+    .button i {
+        margin-right: 5px;
+    }
+
     footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        text-align: left;
     }
 }
