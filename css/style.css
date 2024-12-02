@@ -1,5 +1,171 @@
+/* Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f5f3;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1 {
+    font-family: "Nerko One", cursive;
+    color: orange;
+}
+
+/* General classes */
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+/* Header - Mobile */
+
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    /*Debug*/
+    background-color: lightblue;
+}
+
+header h1 {
+    font-size: 4rem;
+}
+
+/* Main Section - Mobile */
+
+#main-container {
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#recipe-video {
+    /*Debug*/
+    height: 400px;
+    width: 100%;
+    background-color: lavender;
+}
+
+#recipe-overview {
+    padding: 1rem;
+}
+
+/* Socials Section - Mobile*/
+
+#social-section {
+    /*Debug*/
+    background-color: lightblue;
+}
+
+#social-section ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#social-section i {
+    font-size: 1.5rem;
+}
+
+#social-section span {
+    display: none;
+}
+
+/* Subscribe Section - Mobile */
+
+#subscribe-section {
+    display: none;
+
+    /*Debug*/
+    height: 100px;
+    background-color: lavender;
+}
+
+/* Presentation Section - Mobile */
+
+#presentation-img {
+
+    /*Debug*/
+    height: 300px;
+    width: 400px;
+    background-color: lightcyan;
+}
+
+/* Footer - Mobile */
+
+footer {
+    background-color: mediumpurple;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer a {
+    color: white;
+}
+
+/* Tablet Layout */
+@media screen and (min-width:768px) {
+
+    header {
+        justify-content: start;
+    }
+
+    #main-container {
+        width: 90%;
+    }
+
+    #recipe-overview ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    #social-section span {
+        display: inline;
+    }
+
+    #subscribe-section {
+        display: block;
+
+        /*Debug*/
+        height: 100px;
+        background-color: lavender;
+    }
+
+}
+
+/* Desktop Layout */
+@media screen and (min-width:992px) {
+
+    #main-container {
+        width: 70%;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
