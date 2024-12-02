@@ -154,6 +154,15 @@ header h1 {
     font-weight: 500;
 }
 
+#presentation-section h2::after {
+    background: orange;
+    content: "";
+    display: block;
+    width: 7%;
+    height: 2px;
+    margin-bottom: 2rem;
+}
+
 #presentation-img {
     margin: 1rem auto;
     width: 70%;
