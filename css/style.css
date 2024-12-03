@@ -20,6 +20,11 @@ a {
     text-decoration: none;
 }
 
+img {
+    display: block;
+    width: 100%;
+}
+
 h1 a {
     font-family: "Nerko One", cursive;
     color: #ff9614;
@@ -44,7 +49,7 @@ h1 a {
     box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.24);
 }
 
-.button span{
+.button span {
     font-size: 1rem;
 }
 
@@ -69,9 +74,10 @@ header h1 {
 
 /* Main Section - Mobile */
 
-#main-container {
+main {
     margin: 0 auto;
     padding: 2rem;
+    width: 90%;
 }
 
 /* Main Section - Titles */
@@ -81,13 +87,13 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
-#main-title {
+#titles h2 {
     font-size: 2rem;
     color: #4e3969;
     margin-bottom: 1rem;
 }
 
-#main-title span {
+#titles span {
     display: none;
 }
 
@@ -100,11 +106,6 @@ header h1 {
 
 #recipe-video {
     width: 100%;
-}
-
-#recipe-video img {
-    width: 100%;
-    display: block;
 }
 
 
@@ -148,10 +149,6 @@ header h1 {
     margin-bottom: 2rem;
 }
 
-#subscribe-section img {
-    width: 100%;
-}
-
 /* Presentation Section - Mobile */
 
 #presentation-section {
@@ -173,13 +170,9 @@ header h1 {
     margin-bottom: 2rem;
 }
 
-#presentation-img {
+#presentation-section img {
     margin: 1rem auto;
     width: 70%;
-}
-
-#presentation-img img {
-    width: 100%;
 }
 
 #presentation-section article {
@@ -223,15 +216,11 @@ footer a:hover {
         justify-content: start;
     }
 
-    #main-container {
-        width: 90%;
-    }
-
-    #main-title {
+    #titles h2 {
         font-size: 2.5rem;
     }
 
-    #main-title span {
+    #titles span {
         display: inline;
     }
 
@@ -241,8 +230,8 @@ footer a:hover {
 
     #recipe-overview ul {
         display: flex;
-        align-items:center;
-        justify-content:left;
+        align-items: center;
+        justify-content: left;
         flex-wrap: wrap;
         gap: 0 2rem;
     }
@@ -264,12 +253,12 @@ footer a:hover {
         display: block;
     }
 
-    #presentation-img {
+    #presentation-section img {
         margin: 0;
         width: 30%;
     }
 
-    #presentation-img img {
+    #presentation-section img {
         float: left;
         margin-right: 15px;
     }
@@ -279,7 +268,7 @@ footer a:hover {
 /* Desktop Layout */
 @media screen and (min-width:992px) {
 
-    #main-container {
+    main {
         width: 70%;
     }
 
