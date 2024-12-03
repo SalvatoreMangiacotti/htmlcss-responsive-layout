@@ -104,12 +104,13 @@ header h1 {
 
 #recipe-video img {
     width: 100%;
+    display: block;
 }
+
 
 #recipe-overview {
     font-size: 1.2rem;
     padding: 1rem;
-    min-width: 30%;
 }
 
 #recipe-overview h3,
@@ -235,7 +236,7 @@ footer a:hover {
     }
 
     #recipe-overview {
-        width: 80%;
+        font-size: 1rem;
     }
 
     #recipe-overview ul {
@@ -244,6 +245,10 @@ footer a:hover {
         justify-content:left;
         flex-wrap: wrap;
         gap: 0 2rem;
+    }
+
+    #recipe-overview ul li {
+        width: 30%;
     }
 
     .button {
@@ -292,9 +297,12 @@ footer a:hover {
         width: 70%;
     }
 
-    #recipe-video img {
+    #recipe-overview {
+        width: 30%;
+    }
+
+    #recipe-overview ul li {
         width: 100%;
-        height: 100%;
     }
 
     #recipe-overview ul {
